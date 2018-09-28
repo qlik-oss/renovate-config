@@ -41,7 +41,7 @@
       "description": "after-work.js monorepo packages",
       "packageRules": [{
         "groupName": "@after-work.js packages",
-        "packagePatterns": ["^@after-works"]
+        "packagePatterns": ["^@after-work"]
       }]
     },
     "picassoMono": {
