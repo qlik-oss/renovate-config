@@ -27,7 +27,6 @@
         ":ignoreModulesAndTests",
         ":maintainLockFilesDisabled",
         ":autodetectPinVersions",
-        ":prHourlyLimit2",
         ":prConcurrentLimit20",
         "group:monorepos",
         "qlik-oss:picassoMono",
