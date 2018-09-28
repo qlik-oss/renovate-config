@@ -1,0 +1,59 @@
+{
+  "name": "renovate-config-qlik-oss",
+  "version": "0.1.0",
+  "description": "Shareable renovate config for qlik-oss",
+  "author": "QlikTech International AB",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qlik-oss/renovate-config.git"
+  },
+  "keywords": [
+    "qlik-oss",
+    "renovate"
+  ],
+  "renovate-config": {
+    "default": {
+      "extends": [
+        "schedule:weekends",
+        ":separateMajorReleases",
+        ":combinePatchMinorReleases",
+        ":ignoreUnstable",
+        ":prImmediately",
+        ":renovatePrefix",
+        ":semanticPrefixFixDepsChoreOthers",
+        ":updateNotScheduled",
+        ":automergeDisabled",
+        ":ignoreModulesAndTests",
+        ":maintainLockFilesDisabled",
+        ":autodetectPinVersions",
+        ":prHourlyLimit2",
+        ":prConcurrentLimit20",
+        "group:monorepos",
+        "qlik-oss:picassoMono",
+        "qlik-oss:awMono"
+      ],
+      "labels": [
+        "renovate"
+      ]
+    },
+    "awMono": {
+      "description": "after-work.js monorepo packages",
+      "packageRules": [{
+        "groupName": "@after-work.js packages",
+        "packagePatterns": ["^@after-works"]
+      }]
+    },
+    "picassoMono": {
+      "description": "picasso.js monorepo packages",
+      "packagesRules": [{
+        "groupName": "picasso.js packages",
+        "packageNames": [
+          "picasso.js",
+          "picasso-plugin-hammer",
+          "picasso-plugin-q"
+        ]
+      }]
+    }
+  }
+}
