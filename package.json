@@ -23,7 +23,7 @@
         ":renovatePrefix",
         ":semanticPrefixFixDepsChoreOthers",
         ":updateNotScheduled",
-        ":automergeDisabled",
+        ":automergeMinor",
         ":ignoreModulesAndTests",
         ":maintainLockFilesDisabled",
         ":autodetectPinVersions",
