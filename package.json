@@ -53,6 +53,15 @@
           "picasso-plugin-q"
         ]
       }]
+    },
+    "groupMinorPatch": {
+      "description": "Group minor and patch updates for all packages in one",
+      "packageRules": [{
+        "groupName": "one update to rule them all",
+        "packagePatterns": ["*"],
+        "updateTypes": ["minor", "patch", "pin"],
+        "automerge": true
+      }]
     }
   }
 }
