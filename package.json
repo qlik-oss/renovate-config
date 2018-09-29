@@ -57,7 +57,7 @@
     "groupMinorPatch": {
       "description": "Group minor and patch updates for all packages in one",
       "packageRules": [{
-        "groupName": "one update to rule them all",
+        "groupName": "minor and patch",
         "packagePatterns": ["*"],
         "updateTypes": ["minor", "patch", "pin"],
         "automerge": true
