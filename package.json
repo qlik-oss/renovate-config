@@ -30,8 +30,10 @@
         ":prConcurrentLimit20",
         "group:monorepos",
         "qlik-oss:picassoMono",
-        "qlik-oss:awMono"
+        "qlik-oss:awMono",
+        "qlik-oss:groupMinorPatch"
       ],
+      "rebaseStalePrs": true,
       "labels": [
         "renovate"
       ]
