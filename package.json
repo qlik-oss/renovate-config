@@ -30,6 +30,7 @@
         ":prConcurrentLimit20",
         "group:monorepos",
         "qlik-oss:picassoMono",
+        "qlik-oss:nebulaMono",
         "qlik-oss:awMono",
         "qlik-oss:groupMinorPatch"
       ],
@@ -53,6 +54,19 @@
           "picasso.js",
           "picasso-plugin-hammer",
           "picasso-plugin-q"
+        ]
+      }]
+    },
+    "nebulaMono": {
+      "description": "nebula.js monorepo packages",
+      "packagesRules": [{
+        "groupName": "nebula.js packages",
+        "packageNames": [
+          "@nebula.js/cli",
+          "@nebula.js/cli-build",
+          "@nebula.js/cli-sense",
+          "@nebula.js/cli-serve",
+          "@nebula.js/stardust"
         ]
       }]
     },
