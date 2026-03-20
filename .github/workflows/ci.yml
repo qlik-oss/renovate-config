@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON configs
+        run: |
+          set -e
+          shopt -s nullglob
+          for f in *.json; do
+            echo "Validating $f"
+            python3 -m json.tool "$f" > /dev/null
+          done
