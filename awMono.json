@@ -1,0 +1,16 @@
+{
+  "description": "after-work.js monorepo packages",
+  "packageRules": [
+    {
+      "groupName": "@after-work.js packages",
+      "matchSourceUrls": [
+        "https://github.com/qlik-oss/after-work.js",
+        "https://github.com/qlik-oss/after-work.js/**"
+      ]
+    },
+    {
+      "groupName": "@after-work.js packages",
+      "matchPackageNames": ["@after-work/**"]
+    }
+  ]
+}

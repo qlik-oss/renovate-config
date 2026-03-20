@@ -1,0 +1,20 @@
+{
+  "description": "picasso.js monorepo packages",
+  "packageRules": [
+    {
+      "groupName": "picasso.js packages",
+      "matchSourceUrls": [
+        "https://github.com/qlik-oss/picasso.js",
+        "https://github.com/qlik-oss/picasso.js/**"
+      ]
+    },
+    {
+      "groupName": "picasso.js packages",
+      "matchPackageNames": [
+        "picasso.js",
+        "picasso-plugin-hammer",
+        "picasso-plugin-q"
+      ]
+    }
+  ]
+}

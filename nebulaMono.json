@@ -1,0 +1,22 @@
+{
+  "description": "nebula.js monorepo packages",
+  "packageRules": [
+    {
+      "groupName": "nebula.js packages",
+      "matchSourceUrls": [
+        "https://github.com/qlik-oss/nebula.js",
+        "https://github.com/qlik-oss/nebula.js/**"
+      ]
+    },
+    {
+      "groupName": "nebula.js packages",
+      "matchPackageNames": [
+        "@nebula.js/cli",
+        "@nebula.js/cli-build",
+        "@nebula.js/cli-sense",
+        "@nebula.js/cli-serve",
+        "@nebula.js/stardust"
+      ]
+    }
+  ]
+}

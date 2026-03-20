@@ -1,0 +1,11 @@
+{
+  "description": "Group minor and patch updates for all packages in one",
+  "packageRules": [
+    {
+      "groupName": "minor and patch",
+      "packagePatterns": ["*"],
+      "updateTypes": ["minor", "patch", "pin"],
+      "automerge": true
+    }
+  ]
+}

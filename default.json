@@ -1,0 +1,25 @@
+{
+  "description": "Qlik OSS base Renovate preset",
+  "extends": [
+    "schedule:weekends",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable",
+    ":prImmediately",
+    ":renovatePrefix",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":updateNotScheduled",
+    ":automergeMinor",
+    ":ignoreModulesAndTests",
+    ":maintainLockFilesWeekly",
+    ":autodetectPinVersions",
+    ":prConcurrentLimit20",
+    "group:monorepos",
+    "github>qlik-oss/renovate-config:picassoMono",
+    "github>qlik-oss/renovate-config:nebulaMono",
+    "github>qlik-oss/renovate-config:awMono",
+    "github>qlik-oss/renovate-config:groupMinorPatch"
+  ],
+  "rebaseStalePrs": true,
+  "labels": ["renovate"]
+}
