@@ -1,0 +1,15 @@
+{
+  "description": "nebula.js monorepo packages",
+  "packageRules": [
+    {
+      "groupName": "nebula.js packages",
+      "packageNames": [
+        "@nebula.js/cli",
+        "@nebula.js/cli-build",
+        "@nebula.js/cli-sense",
+        "@nebula.js/cli-serve",
+        "@nebula.js/stardust"
+      ]
+    }
+  ]
+}

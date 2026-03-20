@@ -1,0 +1,9 @@
+{
+  "description": "after-work.js monorepo packages",
+  "packageRules": [
+    {
+      "groupName": "@after-work.js packages",
+      "packagePatterns": ["^@after-work"]
+    }
+  ]
+}

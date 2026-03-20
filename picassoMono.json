@@ -1,0 +1,9 @@
+{
+  "description": "picasso.js monorepo packages",
+  "packageRules": [
+    {
+      "groupName": "picasso.js packages",
+      "packageNames": ["picasso.js", "picasso-plugin-hammer", "picasso-plugin-q"]
+    }
+  ]
+}

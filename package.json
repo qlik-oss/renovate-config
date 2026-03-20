@@ -48,7 +48,7 @@
     },
     "picassoMono": {
       "description": "picasso.js monorepo packages",
-      "packagesRules": [{
+      "packageRules": [{
         "groupName": "picasso.js packages",
         "packageNames": [
           "picasso.js",
@@ -59,7 +59,7 @@
     },
     "nebulaMono": {
       "description": "nebula.js monorepo packages",
-      "packagesRules": [{
+      "packageRules": [{
         "groupName": "nebula.js packages",
         "packageNames": [
           "@nebula.js/cli",
