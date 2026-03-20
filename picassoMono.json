@@ -3,7 +3,18 @@
   "packageRules": [
     {
       "groupName": "picasso.js packages",
-      "packageNames": ["picasso.js", "picasso-plugin-hammer", "picasso-plugin-q"]
+      "matchSourceUrls": [
+        "https://github.com/qlik-oss/picasso.js",
+        "https://github.com/qlik-oss/picasso.js/**"
+      ]
+    },
+    {
+      "groupName": "picasso.js packages",
+      "matchPackageNames": [
+        "picasso.js",
+        "picasso-plugin-hammer",
+        "picasso-plugin-q"
+      ]
     }
   ]
 }

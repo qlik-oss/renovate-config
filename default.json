@@ -11,7 +11,7 @@
     ":updateNotScheduled",
     ":automergeMinor",
     ":ignoreModulesAndTests",
-    ":maintainLockFilesDisabled",
+    ":maintainLockFilesWeekly",
     ":autodetectPinVersions",
     ":prConcurrentLimit20",
     "group:monorepos",

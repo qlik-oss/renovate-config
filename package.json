@@ -25,7 +25,7 @@
         ":updateNotScheduled",
         ":automergeMinor",
         ":ignoreModulesAndTests",
-        ":maintainLockFilesDisabled",
+        ":maintainLockFilesWeekly",
         ":autodetectPinVersions",
         ":prConcurrentLimit20",
         "group:monorepos",
@@ -41,43 +41,59 @@
     },
     "awMono": {
       "description": "after-work.js monorepo packages",
-      "packageRules": [{
-        "groupName": "@after-work.js packages",
-        "packagePatterns": ["^@after-work"]
-      }]
+      "packageRules": [
+        {
+          "groupName": "@after-work.js packages",
+          "packagePatterns": [
+            "^@after-work"
+          ]
+        }
+      ]
     },
     "picassoMono": {
       "description": "picasso.js monorepo packages",
-      "packageRules": [{
-        "groupName": "picasso.js packages",
-        "packageNames": [
-          "picasso.js",
-          "picasso-plugin-hammer",
-          "picasso-plugin-q"
-        ]
-      }]
+      "packageRules": [
+        {
+          "groupName": "picasso.js packages",
+          "packageNames": [
+            "picasso.js",
+            "picasso-plugin-hammer",
+            "picasso-plugin-q"
+          ]
+        }
+      ]
     },
     "nebulaMono": {
       "description": "nebula.js monorepo packages",
-      "packageRules": [{
-        "groupName": "nebula.js packages",
-        "packageNames": [
-          "@nebula.js/cli",
-          "@nebula.js/cli-build",
-          "@nebula.js/cli-sense",
-          "@nebula.js/cli-serve",
-          "@nebula.js/stardust"
-        ]
-      }]
+      "packageRules": [
+        {
+          "groupName": "nebula.js packages",
+          "packageNames": [
+            "@nebula.js/cli",
+            "@nebula.js/cli-build",
+            "@nebula.js/cli-sense",
+            "@nebula.js/cli-serve",
+            "@nebula.js/stardust"
+          ]
+        }
+      ]
     },
     "groupMinorPatch": {
       "description": "Group minor and patch updates for all packages in one",
-      "packageRules": [{
-        "groupName": "minor and patch",
-        "packagePatterns": ["*"],
-        "updateTypes": ["minor", "patch", "pin"],
-        "automerge": true
-      }]
+      "packageRules": [
+        {
+          "groupName": "minor and patch",
+          "packagePatterns": [
+            "*"
+          ],
+          "updateTypes": [
+            "minor",
+            "patch",
+            "pin"
+          ],
+          "automerge": true
+        }
+      ]
     }
   }
 }
