@@ -15,6 +15,7 @@
     ":autodetectPinVersions",
     ":prConcurrentLimit20",
     "group:monorepos",
+    "helpers:pinGitHubActionDigests",
     "github>qlik-oss/renovate-config:picassoMono",
     "github>qlik-oss/renovate-config:nebulaMono",
     "github>qlik-oss/renovate-config:awMono",
