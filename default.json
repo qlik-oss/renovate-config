@@ -1,7 +1,6 @@
 {
   "description": "Qlik OSS base Renovate preset",
   "extends": [
-    "schedule:weekends",
     ":separateMajorReleases",
     ":combinePatchMinorReleases",
     ":ignoreUnstable",
