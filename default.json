@@ -21,5 +21,8 @@
     "github>qlik-oss/renovate-config:groupMinorPatch"
   ],
   "rebaseStalePrs": true,
-  "labels": ["renovate"]
+  "labels": ["renovate"],
+  "minimumReleaseAge": "7 days",
+  "prCreation": "not-pending",
+  "internalChecksFilter": "strict"
 }
