@@ -1,20 +1,17 @@
 {
   "description": "Qlik OSS base Renovate preset",
   "extends": [
+    "config:recommended",
+    "security:minimumReleaseAgeNpm",
     ":separateMajorReleases",
     ":combinePatchMinorReleases",
     ":ignoreUnstable",
-    ":prImmediately",
     ":renovatePrefix",
-    ":semanticPrefixFixDepsChoreOthers",
     ":updateNotScheduled",
     ":automergeMinor",
-    ":ignoreModulesAndTests",
     ":maintainLockFilesWeekly",
     ":autodetectPinVersions",
     ":prConcurrentLimit20",
-    "group:monorepos",
-    "helpers:pinGitHubActionDigests",
     "github>qlik-oss/renovate-config:picassoMono",
     "github>qlik-oss/renovate-config:nebulaMono",
     "github>qlik-oss/renovate-config:awMono",
@@ -24,5 +21,18 @@
   "labels": ["renovate"],
   "minimumReleaseAge": "7 days",
   "prCreation": "not-pending",
-  "internalChecksFilter": "strict"
+  "internalChecksFilter": "strict",
+  "packageRules": [
+    {
+      "description": "Pin GitHub Action to specific digest (commit sha)",
+      "matchDepTypes": ["action"],
+      "pinDigests": true
+    },
+    {
+      "description": "Do not apply minimum release age to internal npm packages",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@qlik/**", "@nebula.js/**"],
+      "minimumReleaseAge": null
+    }
+  ]
 }
