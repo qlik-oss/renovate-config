@@ -31,8 +31,7 @@
     {
       "description": "Disable rollback PRs for GitHub Actions",
       "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["rollback"],
-      "enabled": false
+      "rollbackPrs": false
     },
     {
       "description": "Rollback PRs should not be subject to minimum release age",
