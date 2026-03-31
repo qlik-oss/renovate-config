@@ -25,8 +25,7 @@
   "internalChecksFilter": "strict",
   "packageRules": [
     {
-      "description": "Enable rollback PRs only for yanked packages flagged as security vulnerabilities",
-      "matchJsonata": ["isVulnerabilityAlert = true"],
+      "description": "Enable rollback PRs for yanked packages",
       "rollbackPrs": true
     },
     {
