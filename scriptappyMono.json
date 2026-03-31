@@ -1,0 +1,12 @@
+{
+  "description": "Scriptappy monorepo packages",
+  "packageRules": [
+    {
+      "groupName": "Scriptappy",
+      "matchSourceUrls": [
+        "https://github.com/qlik-oss/scriptappy",
+        "https://github.com/qlik-oss/scriptappy/**"
+      ]
+    }
+  ]
+}
