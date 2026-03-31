@@ -25,6 +25,11 @@
   "internalChecksFilter": "strict",
   "packageRules": [
     {
+      "description": "Enable rollback PRs only for yanked packages flagged as security vulnerabilities",
+      "matchJsonata": ["isVulnerabilityAlert = true"],
+      "rollbackPrs": true
+    },
+    {
       "description": "Pin GitHub Action to specific digest (commit sha)",
       "matchDepTypes": ["action"],
       "pinDigests": true
