@@ -29,6 +29,12 @@
       "rollbackPrs": true
     },
     {
+      "description": "Rollback PRs should not be subject to minimum release age",
+      "matchUpdateTypes": ["rollback"],
+      "minimumReleaseAge": "0 days",
+      "prCreation": "immediate"
+    },
+    {
       "description": "Pin GitHub Action to specific digest (commit sha)",
       "matchDepTypes": ["action"],
       "pinDigests": true
@@ -37,7 +43,7 @@
       "description": "Do not apply minimum release age to qlik-oss npm packages",
       "matchDatasources": ["npm"],
       "matchPackageNames": ["@qlik/**", "@nebula.js/**"],
-      "minimumReleaseAge": null
+      "minimumReleaseAge": "0 days"
     }
   ]
 }
