@@ -21,7 +21,6 @@
   "rebaseStalePrs": true,
   "labels": ["renovate"],
   "minimumReleaseAge": "7 days",
-  "prCreation": "not-pending",
   "internalChecksFilter": "strict",
   "packageRules": [
     {
