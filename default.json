@@ -22,6 +22,7 @@
   "labels": ["renovate"],
   "minimumReleaseAge": "7 days",
   "internalChecksFilter": "strict",
+  "prCreation": "not-pending",
   "packageRules": [
     {
       "description": "Enable rollback PRs for yanked packages",
