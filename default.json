@@ -47,7 +47,7 @@
     {
       "description": "Do not apply minimum release age to qlik-oss npm packages",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["@qlik/**", "@nebula.js/**"],
+      "matchPackageNames": ["@qlik/**", "@nebula.js/**", "@scriptappy/**", "enigma.js"],
       "minimumReleaseAge": "0 days",
       "prCreation": "immediate"
     }
