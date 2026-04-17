@@ -15,14 +15,17 @@
     "github>qlik-oss/renovate-config:picassoMono",
     "github>qlik-oss/renovate-config:nebulaMono",
     "github>qlik-oss/renovate-config:awMono",
-    "github>qlik-oss/renovate-config:scriptappyMono",
-    "github>qlik-oss/renovate-config:groupMinorPatch"
+    "github>qlik-oss/renovate-config:scriptappyMono"
   ],
   "rebaseStalePrs": true,
   "labels": ["renovate"],
   "minimumReleaseAge": "7 days",
   "internalChecksFilter": "strict",
   "prCreation": "not-pending",
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+  "osvVulnerabilityAlerts": true,
   "packageRules": [
     {
       "description": "Enable rollback PRs for yanked packages",
@@ -50,6 +53,12 @@
       "matchPackageNames": ["@qlik/**", "@nebula.js/**", "@scriptappy/**", "enigma.js"],
       "minimumReleaseAge": "0 days",
       "prCreation": "immediate"
+    },
+    {
+      "description": "Prioritize packages sourced from qlik-oss repositories",
+      "matchSourceUrls": ["https://github.com/qlik-oss/**"],
+      "prPriority": 10,
+      "prConcurrentLimit": 20
     }
   ]
 }
