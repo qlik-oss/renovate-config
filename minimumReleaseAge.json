@@ -6,7 +6,11 @@
     {
       "description": "Rollback PRs should not be subject to minimum release age",
       "matchUpdateTypes": ["rollback"],
-      "minimumReleaseAge": null
+      "minimumReleaseAge": null,
+      "prCreation": "immediate",
+      "prBodyNotes": [
+        "⚠️ This update is a rollback PR, so it is not subject to minimum release age. Please validate the release age manually before merging."
+      ]
     },
     {
       "description": "Do not apply minimum release age to qlik-oss packages by package name",
@@ -16,17 +20,26 @@
         "@scriptappy/**",
         "enigma.js"
       ],
-      "minimumReleaseAge": null
+      "minimumReleaseAge": "0 days",
+      "prCreation": "immediate",
+      "prBodyNotes": [
+        "⚠️ This update is not subject to minimum release age because it matches a package rule for qlik-oss packages. Please validate the release age manually before merging."
+      ]
     },
     {
       "description": "Do not apply minimum release age to qlik-oss packages by source URL",
       "matchSourceUrls": ["https://github.com/qlik-oss/**"],
-      "minimumReleaseAge": null
+      "minimumReleaseAge": "0 days",
+      "prCreation": "immediate",
+      "prBodyNotes": [
+        "⚠️ This update is not subject to minimum release age because it matches a package rule for qlik-oss packages. Please validate the release age manually before merging."
+      ]
     },
     {
       "description": "Do not require minimum release age for lock file maintenance",
       "matchUpdateTypes": ["lockFileMaintenance"],
       "minimumReleaseAge": null,
+      "prCreation": "immediate",
       "prBodyNotes": [
         "⚠️ Renovate lock file maintenance does not validate minimum release age because the package manager performs the required updates."
       ]
@@ -35,6 +48,7 @@
       "description": "Do not require minimum release age for package replacements",
       "matchUpdateTypes": ["replacement"],
       "minimumReleaseAge": null,
+      "prCreation": "immediate",
       "prBodyNotes": [
         "⚠️ Renovate replacement updates do not currently wire package release age into checks, so minimum release age must be validated manually."
       ]
@@ -43,6 +57,7 @@
       "description": "Do not require minimum release age for package pinning",
       "matchUpdateTypes": ["pin"],
       "minimumReleaseAge": null,
+      "prCreation": "immediate",
       "prBodyNotes": [
         "⚠️ Renovate pin updates do not currently wire package release age into checks, so minimum release age must be validated manually."
       ]
@@ -51,6 +66,7 @@
       "description": "Do not require minimum release age for digest updates",
       "matchUpdateTypes": ["digest", "pinDigest"],
       "minimumReleaseAge": null,
+      "prCreation": "immediate",
       "prBodyNotes": [
         "⚠️ Renovate digest updates may not reliably provide release age checks, so minimum release age is disabled for these updates."
       ]
