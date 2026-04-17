@@ -1,0 +1,46 @@
+{
+  "description": "Local equivalent of security:minimumReleaseAgeNpm",
+  "minimumReleaseAge": "7 days",
+  "internalChecksFilter": "strict",
+  "packageRules": [
+    {
+      "description": "Rollback PRs should not be subject to minimum release age",
+      "matchUpdateTypes": ["rollback"],
+      "minimumReleaseAge": "0 days"
+    },
+    {
+      "description": "Do not apply minimum release age to qlik-oss packages by package name",
+      "matchPackageNames": ["@qlik/**", "@nebula.js/**", "@scriptappy/**", "enigma.js"],
+      "minimumReleaseAge": "0 days"
+    },
+    {
+      "description": "Do not apply minimum release age to qlik-oss packages by source URL",
+      "matchSourceUrls": ["https://github.com/qlik-oss/**"],
+      "minimumReleaseAge": "0 days"
+    },
+    {
+      "description": "Do not require minimum release age for lock file maintenance",
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "minimumReleaseAge": null,
+      "prBodyNotes": [
+        "⚠️ Renovate lock file maintenance does not validate minimum release age because the package manager performs the required updates."
+      ]
+    },
+    {
+      "description": "Do not require minimum release age for package replacements",
+      "matchUpdateTypes": ["replacement"],
+      "minimumReleaseAge": null,
+      "prBodyNotes": [
+        "⚠️ Renovate replacement updates do not currently wire package release age into checks, so minimum release age must be validated manually."
+      ]
+    },
+    {
+      "description": "Do not require minimum release age for package pinning",
+      "matchUpdateTypes": ["pin"],
+      "minimumReleaseAge": null,
+      "prBodyNotes": [
+        "⚠️ Renovate pin updates do not currently wire package release age into checks, so minimum release age must be validated manually."
+      ]
+    }
+  ]
+}

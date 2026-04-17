@@ -2,7 +2,7 @@
   "description": "Qlik OSS base Renovate preset",
   "extends": [
     "config:recommended",
-    "security:minimumReleaseAgeNpm",
+    "github>qlik-oss/renovate-config:minimumReleaseAge",
     ":separateMajorReleases",
     ":combinePatchMinorReleases",
     ":ignoreUnstable",
@@ -19,8 +19,6 @@
   ],
   "rebaseStalePrs": true,
   "labels": ["renovate"],
-  "minimumReleaseAge": "7 days",
-  "internalChecksFilter": "strict",
   "prCreation": "not-pending",
   "vulnerabilityAlerts": {
     "enabled": true
@@ -37,28 +35,19 @@
       "rollbackPrs": false
     },
     {
-      "description": "Rollback PRs should not be subject to minimum release age",
-      "matchUpdateTypes": ["rollback"],
-      "minimumReleaseAge": "0 days",
-      "prCreation": "immediate"
-    },
-    {
       "description": "Pin GitHub Action to specific digest (commit sha)",
       "matchDepTypes": ["action"],
       "pinDigests": true
     },
     {
-      "description": "Do not apply minimum release age to qlik-oss npm packages",
-      "matchDatasources": ["npm"],
+      "description": "Prioritize qlik-oss packages by package name",
       "matchPackageNames": ["@qlik/**", "@nebula.js/**", "@scriptappy/**", "enigma.js"],
-      "minimumReleaseAge": "0 days",
-      "prCreation": "immediate"
+      "prPriority": 10
     },
     {
-      "description": "Prioritize packages sourced from qlik-oss repositories",
+      "description": "Prioritize qlik-oss packages by source URL",
       "matchSourceUrls": ["https://github.com/qlik-oss/**"],
-      "prPriority": 10,
-      "prConcurrentLimit": 20
-    }
+      "prPriority": 10
+    },
   ]
 }

@@ -3,6 +3,7 @@
   "packageRules": [
     {
       "groupName": "Scriptappy",
+      "matchPackageNames": ["@scriptappy/**"],
       "matchSourceUrls": [
         "https://github.com/qlik-oss/scriptappy",
         "https://github.com/qlik-oss/scriptappy/**"
