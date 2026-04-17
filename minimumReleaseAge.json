@@ -6,17 +6,22 @@
     {
       "description": "Rollback PRs should not be subject to minimum release age",
       "matchUpdateTypes": ["rollback"],
-      "minimumReleaseAge": "0 days"
+      "minimumReleaseAge": null
     },
     {
       "description": "Do not apply minimum release age to qlik-oss packages by package name",
-      "matchPackageNames": ["@qlik/**", "@nebula.js/**", "@scriptappy/**", "enigma.js"],
-      "minimumReleaseAge": "0 days"
+      "matchPackageNames": [
+        "@qlik/**",
+        "@nebula.js/**",
+        "@scriptappy/**",
+        "enigma.js"
+      ],
+      "minimumReleaseAge": null
     },
     {
       "description": "Do not apply minimum release age to qlik-oss packages by source URL",
       "matchSourceUrls": ["https://github.com/qlik-oss/**"],
-      "minimumReleaseAge": "0 days"
+      "minimumReleaseAge": null
     },
     {
       "description": "Do not require minimum release age for lock file maintenance",
@@ -40,6 +45,14 @@
       "minimumReleaseAge": null,
       "prBodyNotes": [
         "⚠️ Renovate pin updates do not currently wire package release age into checks, so minimum release age must be validated manually."
+      ]
+    },
+    {
+      "description": "Do not require minimum release age for digest updates",
+      "matchUpdateTypes": ["digest", "pinDigest"],
+      "minimumReleaseAge": null,
+      "prBodyNotes": [
+        "⚠️ Renovate digest updates may not reliably provide release age checks, so minimum release age is disabled for these updates."
       ]
     }
   ]

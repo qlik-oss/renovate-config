@@ -41,13 +41,18 @@
     },
     {
       "description": "Prioritize qlik-oss packages by package name",
-      "matchPackageNames": ["@qlik/**", "@nebula.js/**", "@scriptappy/**", "enigma.js"],
+      "matchPackageNames": [
+        "@qlik/**",
+        "@nebula.js/**",
+        "@scriptappy/**",
+        "enigma.js"
+      ],
       "prPriority": 10
     },
     {
       "description": "Prioritize qlik-oss packages by source URL",
       "matchSourceUrls": ["https://github.com/qlik-oss/**"],
       "prPriority": 10
-    },
+    }
   ]
 }
