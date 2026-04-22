@@ -8,7 +8,6 @@
     ":ignoreUnstable",
     ":renovatePrefix",
     ":updateNotScheduled",
-    ":automergeMinor",
     ":maintainLockFilesWeekly",
     ":autodetectPinVersions",
     ":prConcurrentLimit20",
