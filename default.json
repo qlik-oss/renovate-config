@@ -18,7 +18,6 @@
   ],
   "rebaseStalePrs": true,
   "labels": ["renovate"],
-  "prCreation": "not-pending",
   "vulnerabilityAlerts": {
     "enabled": true
   },
