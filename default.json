@@ -17,7 +17,14 @@
     "github>qlik-oss/renovate-config:scriptappyMono"
   ],
   "rebaseStalePrs": true,
-  "labels": ["renovate"],
+  "labels": [
+    "renovate"
+  ],
+  "postUpdateOptions": [
+    "yarnDedupeHighest",
+    "pnpmDedupe",
+    "npmDedupe"
+  ],
   "vulnerabilityAlerts": {
     "enabled": true
   },
@@ -29,12 +36,16 @@
     },
     {
       "description": "Disable rollback PRs for GitHub Actions",
-      "matchManagers": ["github-actions"],
+      "matchManagers": [
+        "github-actions"
+      ],
       "rollbackPrs": false
     },
     {
       "description": "Pin GitHub Action to specific digest (commit sha)",
-      "matchDepTypes": ["action"],
+      "matchDepTypes": [
+        "action"
+      ],
       "pinDigests": true
     },
     {
@@ -49,7 +60,9 @@
     },
     {
       "description": "Prioritize qlik-oss packages by source URL",
-      "matchSourceUrls": ["https://github.com/qlik-oss/**"],
+      "matchSourceUrls": [
+        "https://github.com/qlik-oss/**"
+      ],
       "prPriority": 10
     }
   ]
