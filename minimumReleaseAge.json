@@ -5,7 +5,9 @@
   "packageRules": [
     {
       "description": "Rollback PRs should not be subject to minimum release age",
-      "matchUpdateTypes": ["rollback"],
+      "matchUpdateTypes": [
+        "rollback"
+      ],
       "minimumReleaseAge": null,
       "prCreation": "immediate",
       "prBodyNotes": [
@@ -14,7 +16,9 @@
     },
     {
       "description": "Do not require minimum release age for lock file maintenance",
-      "matchUpdateTypes": ["lockFileMaintenance"],
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
       "minimumReleaseAge": null,
       "prCreation": "immediate",
       "prBodyNotes": [
@@ -23,7 +27,9 @@
     },
     {
       "description": "Do not require minimum release age for package replacements",
-      "matchUpdateTypes": ["replacement"],
+      "matchUpdateTypes": [
+        "replacement"
+      ],
       "minimumReleaseAge": null,
       "prCreation": "immediate",
       "prBodyNotes": [
@@ -31,17 +37,11 @@
       ]
     },
     {
-      "description": "Do not require minimum release age for package pinning",
-      "matchUpdateTypes": ["pin"],
-      "minimumReleaseAge": null,
-      "prCreation": "immediate",
-      "prBodyNotes": [
-        "⚠️ Renovate pin updates do not currently wire package release age into checks, so minimum release age must be validated manually."
-      ]
-    },
-    {
       "description": "Do not require minimum release age for digest updates",
-      "matchUpdateTypes": ["digest", "pinDigest"],
+      "matchUpdateTypes": [
+        "digest",
+        "pinDigest"
+      ],
       "minimumReleaseAge": null,
       "prCreation": "immediate",
       "prBodyNotes": [

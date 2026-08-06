@@ -1,9 +1,69 @@
 {
   "description": "Qlik OSS base Renovate preset",
-  "labels": ["renovate"],
-  "enabled": false,
+  "extends": [
+    "config:recommended",
+    "github>qlik-oss/renovate-config:minimumReleaseAge",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable",
+    ":renovatePrefix",
+    ":updateNotScheduled",
+    ":maintainLockFilesWeekly",
+    ":autodetectPinVersions",
+    ":prConcurrentLimit20",
+    "github>qlik-oss/renovate-config:picassoMono",
+    "github>qlik-oss/renovate-config:nebulaMono",
+    "github>qlik-oss/renovate-config:awMono",
+    "github>qlik-oss/renovate-config:scriptappyMono"
+  ],
+  "rebaseStalePrs": true,
+  "labels": [
+    "renovate"
+  ],
+  "postUpdateOptions": [
+    "yarnDedupeHighest",
+    "pnpmDedupe",
+    "npmDedupe"
+  ],
   "vulnerabilityAlerts": {
     "enabled": true
   },
-  "osvVulnerabilityAlerts": true
+  "osvVulnerabilityAlerts": true,
+  "packageRules": [
+    {
+      "description": "Enable rollback PRs for yanked packages",
+      "rollbackPrs": true
+    },
+    {
+      "description": "Disable rollback PRs for GitHub Actions",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "rollbackPrs": false
+    },
+    {
+      "description": "Pin GitHub Action to specific digest (commit sha)",
+      "matchDepTypes": [
+        "action"
+      ],
+      "pinDigests": true
+    },
+    {
+      "description": "Prioritize qlik-oss packages by package name",
+      "matchPackageNames": [
+        "@qlik/**",
+        "@nebula.js/**",
+        "@scriptappy/**",
+        "enigma.js"
+      ],
+      "prPriority": 10
+    },
+    {
+      "description": "Prioritize qlik-oss packages by source URL",
+      "matchSourceUrls": [
+        "https://github.com/qlik-oss/**"
+      ],
+      "prPriority": 10
+    }
+  ]
 }
