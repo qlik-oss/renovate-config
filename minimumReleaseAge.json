@@ -13,6 +13,29 @@
       ]
     },
     {
+      "description": "Do not apply minimum release age to qlik-oss packages by package name",
+      "matchPackageNames": [
+        "@qlik/**",
+        "@nebula.js/**",
+        "@scriptappy/**",
+        "enigma.js"
+      ],
+      "minimumReleaseAge": "0 days",
+      "prCreation": "immediate",
+      "prBodyNotes": [
+        "⚠️ This update is not subject to minimum release age because it matches a package rule for qlik-oss packages. Please validate the release age manually before merging."
+      ]
+    },
+    {
+      "description": "Do not apply minimum release age to qlik-oss packages by source URL",
+      "matchSourceUrls": ["https://github.com/qlik-oss/**"],
+      "minimumReleaseAge": "0 days",
+      "prCreation": "immediate",
+      "prBodyNotes": [
+        "⚠️ This update is not subject to minimum release age because it matches a package rule for qlik-oss packages. Please validate the release age manually before merging."
+      ]
+    },
+    {
       "description": "Do not require minimum release age for lock file maintenance",
       "matchUpdateTypes": ["lockFileMaintenance"],
       "minimumReleaseAge": null,
